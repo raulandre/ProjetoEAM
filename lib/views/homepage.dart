@@ -45,9 +45,7 @@ class _HomePageState extends State<HomePage> {
         return getNews();
       },
       child: Scaffold(
-          appBar: AppBar(
-            title: const Text("Hacker News"),
-          ),
+          appBar: AppBar(title: const Text("Hacker News")),
           floatingActionButton: Visibility(
             visible: isLoaded,
             child: FloatingActionButton(
@@ -76,6 +74,13 @@ class _HomePageState extends State<HomePage> {
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
+                    ),
+                    trailing: Text(
+                      items![index].by ?? "",
+                      style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w200,
+                          fontStyle: FontStyle.italic),
                     ),
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(

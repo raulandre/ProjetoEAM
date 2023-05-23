@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projetoeam/views/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,27 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: const RootPage(),
-    );
-  }
-}
-
-class RootPage extends StatefulWidget {
-  const RootPage({super.key});
-
-  @override
-  State<RootPage> createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Hacker News"),
-      ),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {}, child: const Icon(Icons.refresh)),
+      home: const HomePage(),
     );
   }
 }
